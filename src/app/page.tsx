@@ -1,8 +1,9 @@
 import Image from "next/image";
-import headshot from "./headshot.jpg";
-import githubLogo from "./github-mark.png";
-import linkedinLogo from "./linkedin-logo.png";
-import { SocialLink } from "@/components/SocialLink";
+import headshot from "public/headshot.jpg";
+import githubLogo from "public/github-mark.png";
+import linkedinLogo from "public/linkedin-logo.png";
+import mailLogo from "public/mail.png";
+import { SocialLink } from "components/SocialLink";
 
 export default function Home() {
   return (
@@ -37,6 +38,14 @@ export default function Home() {
           linkLabel="linkedin.com/in/sarah-pickrahn"
           logo={linkedinLogo}
           width={19}
+        />
+        <SocialLink
+          alt="email Sarah"
+          height={16}
+          linkHref="mailto:sarah.pickrahn@gmail.com"
+          linkLabel="Email me"
+          logo={mailLogo}
+          width={16}
         />
       </div>
     </main>
