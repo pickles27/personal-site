@@ -2,7 +2,7 @@ import Image from "next/image";
 import headshot from "public/headshot.jpg";
 import githubLogo from "public/github-mark.png";
 import linkedinLogo from "public/linkedin-logo.png";
-import mailLogo from "public/mail.png";
+import mailLogo from "public/mail.svg";
 import { SocialLink } from "components/SocialLink";
 
 export default function Home() {
