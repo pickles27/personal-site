@@ -1,33 +1,26 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import { Social, getLinkDataBySocial } from "../utils/getLinkDataBySocial";
 
 export interface SocialLinkProps {
-  alt: string;
-  height: number;
-  linkHref: string;
-  linkLabel: string;
-  logo: StaticImageData;
-  width: number;
+  social: Social;
 }
 
-export const SocialLink = ({
-  alt,
-  height,
-  linkHref,
-  linkLabel,
-  logo,
-  width,
-}: SocialLinkProps) => (
-  <div className="flex items-center gap-1">
-    <div className="w-5 h-4">
-      <Image alt={alt} height={height} src={logo} width={width} />
+export const SocialLink = ({ social }: SocialLinkProps) => {
+  const { href, label, logo } = getLinkDataBySocial(social);
+
+  return (
+    <div className="flex items-center gap-1">
+      <div className="w-5 h-4">
+        <Image {...logo} alt={logo.alt} />
+      </div>
+      <a
+        className="text-blue-900"
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {label}
+      </a>
     </div>
-    <a
-      className="text-blue-900"
-      href={linkHref}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {linkLabel}
-    </a>
-  </div>
-);
+  );
+};
