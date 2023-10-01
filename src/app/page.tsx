@@ -1,11 +1,8 @@
 import { SocialLink } from "@/components/SocialLink";
+import { blurb, name } from "@/utils/bioData";
 import { Social } from "@/utils/getLinkDataBySocial";
 import Image from "next/image";
 import headshot from "public/headshot.jpg";
-
-export const name = "Sarah Pickrahn";
-export const blurb =
-  "Hi, I'm Sarah! I'm a front-end engineer living in Snohomish, WA with my boyfriend and 2 cats, Zombie and Penelope. When I'm not working, I love rock climbing, lifting weights, playing video games, and painting.";
 
 export default function Home() {
   return (
