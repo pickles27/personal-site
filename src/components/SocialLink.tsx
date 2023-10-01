@@ -1,12 +1,12 @@
+import { Social, socialData } from "@/data/socialData";
 import Image from "next/image";
-import { Social, getLinkDataBySocial } from "../utils/getLinkDataBySocial";
 
 export interface SocialLinkProps {
   social: Social;
 }
 
 export const SocialLink = ({ social }: SocialLinkProps) => {
-  const { href, label, logo } = getLinkDataBySocial(social);
+  const { href, label, logo } = socialData[social];
 
   return (
     <div className="flex items-center gap-1">

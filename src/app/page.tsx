@@ -1,6 +1,6 @@
 import { SocialLink } from "@/components/SocialLink";
-import { blurb, name } from "@/utils/bioData";
-import { Social } from "@/utils/getLinkDataBySocial";
+import { blurb, name } from "@/data/bioData";
+import { Social } from "@/data/socialData";
 import Image from "next/image";
 import headshot from "public/headshot.jpg";
 

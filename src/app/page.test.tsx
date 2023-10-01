@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
-import { blurb, name } from "@/utils/bioData";
+import { blurb, name } from "@/data/bioData";
 
 jest.mock("@/components/SocialLink");
 

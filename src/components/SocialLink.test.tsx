@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { SocialLink } from "./SocialLink";
-import { getLinkDataBySocial, Social } from "../utils/getLinkDataBySocial";
+import { Social, socialData } from "@/data/socialData";
 
 test.each([[Social.Github], [Social.LinkedIn], [Social.Email]])(
   "Displays the logo for %s",
   (social: Social) => {
     const {
       logo: { alt },
-    } = getLinkDataBySocial(social);
+    } = socialData[social];
 
     render(<SocialLink social={social} />);
 
@@ -18,7 +18,7 @@ test.each([[Social.Github], [Social.LinkedIn], [Social.Email]])(
 test.each([[Social.Github], [Social.LinkedIn], [Social.Email]])(
   "Displays the link for %s",
   (social: Social) => {
-    const { label } = getLinkDataBySocial(social);
+    const { label } = socialData[social];
 
     render(<SocialLink social={social} />);
 
@@ -28,7 +28,7 @@ test.each([[Social.Github], [Social.LinkedIn], [Social.Email]])(
 
 test("The link has the expected attributes", () => {
   const social = Social.Github;
-  const { label } = getLinkDataBySocial(social);
+  const { label } = socialData[social];
 
   render(<SocialLink social={social} />);
 
