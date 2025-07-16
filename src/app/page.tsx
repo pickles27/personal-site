@@ -16,9 +16,9 @@ export default function Home() {
       <div className="flex flex-col gap-3 mt-5 sm:mt-0 sm:p-5 sm:w-80 text-sm">
         <h1 className="font-serif text-xl">Sarah Pickrahn</h1>
         <p className="text-slate-800">
-          Hi, I&apos;m Sarah. I&apos;m a software engineer living in Hayward, CA
-          with my partner and 2 cats. When I&apos;m not working, I love
-          powerlifting, dance, rock climbing, and playing video games!
+          Hi, I&apos;m Sarah. I&apos;m a software engineer living in the San
+          Francisco Bay Area. When I&apos;m not working, I love powerlifting,
+          dance, rock climbing, and playing video games!
         </p>
         <SocialLinks />
       </div>
